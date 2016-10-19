@@ -1,0 +1,89 @@
+<section class="navbox" ng-class="{navlinks2: navLinks2}">
+  <div class="logo-white">
+    <a ui-sref='home'><img ng-hide="navLinks2" src="./images/whiteLogo.png"/>
+      <img ng-show="navLinks2" src="./images/blackLogo.png"/>
+    </a>
+
+  </div>
+  <div class="navlinks">
+    <span class="navlinkbox"><a ui-sref='our-home'>OUR HOME</a></span>
+    <span class="navlinkbox"><a ui-sref='shop'>SHOP</a></span>
+    <span class="navlinkbox"><a ui-sref='the-jeans'>THE JEANS</a></span>
+  </div>
+
+
+
+  <span class="cartlinkbox">
+    <a ng-click='showCart()'>bag<span ng-if="productsInCart.length > 0" class='cartlinknum'>{{productsInCart.length}}</a>
+  </span>
+
+  <div ng-if="cartShowing" ng-click="hideCart()" class="cart-fuzz"></div>
+  <div class="cart" ng-if="cartShowing">
+
+    <div class="cart-inner">
+      <div class="cart-header">
+        <a ng-click="hideCart()" class="cart-close"></a>
+      </div>
+      <div ng-if="productsInCart.length === 0" class="empty-cart-text">BAG IS EMPTY</div>
+
+
+      <div class="cart-items" ng-repeat="product in productsInCart">
+        <div class="cart-item">
+          <div class="cart-item-container">
+              <div class="cart-item-left">
+                <img ng-src='{{product.imageurl}}'/>
+              </div>
+              <div class="cart-item-right">
+                <div class="cart-item-name">
+                  {{product.item_name}}
+                  <a class="cart-delete" ng-click="removeItemFromCartList(product)"></a>
+                </div>
+                <div class = "cart-item-variation">M</div>
+                <div class="cart-item-price">
+                  <div class="cart-item-price-subtotal">
+                      {{product.price}}
+                  </div>
+                <div class="cart-item-price-total">
+                    {{product.item_total | currency}}
+                </div>
+                </div>
+                <div class="cart-item-qty">
+                    <a ng-click="decrease(product)" class="cart-item-qty-decrease"></a>
+                    <div class="cart-item-qty-num">
+                      {{product.cartQty}}
+                    </div>
+                    <a ng-click="increase(product)" class="cart-item-qty-increase"></a>
+                </div>
+            </div>
+
+          </div>
+       </div>
+
+      </div>
+
+      <div class="cart-continueshopping">
+        <a ng-if="productsInCart.length > 0" ng-click="hideCart()" class="cart-continueshopping-button">
+          continue shopping
+        </a>
+      </div>
+
+      <div class="cart-footer">
+          <div class="cart-footer-totals">
+              <div class="cart-footer-totals-left">
+                <div class="cart-footer-totals-left-subtotal">SUBTOTAL</div>
+                <div class="cart-footer-totals-left-beforetax">BEFORE TAX + SHIPPING</div>
+              </div>
+              <div class="cart-footer-totals-right">
+                <div class="cart-footer-totals-right-total">{{mySubTotal.item_total | currency}}</div>
+              </div>
+          </div>
+          <div class="cart-footer-checkout">
+              <a ui-sref="checkout"><div class="cart-footer-checkout-button">CHECKOUT</div></a>
+          </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

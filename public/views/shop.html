@@ -1,0 +1,66 @@
+
+<div class='noImagebox'>
+<header-directive></header-directive>
+</div>
+
+<div class="jeanscollection">
+  <div class="grid3-shopview" >
+
+
+
+
+  <div class="griditem" ng-repeat="product in products">
+    <div class='gridImageWrap' style="background-image: url({{product.imageurl}})">
+        <img ng-src="{{product.image2url}}"/>
+    </div>
+
+      <div class="griditemInfo">
+        {{product.item_name}}
+      </br>
+        {{product.price}}
+      </div>
+        <button class='addToCartButton' type="button" ng-click="add(product)">Add to Bag</button>
+
+  </div>
+
+
+  </div>
+</div>
+
+
+
+
+      <!-- <div class="griditem">
+        <img src="./images/charlierigid.jpg" title="charlie rigid"/>
+        {{products[1].item_name}}
+        {{products[1].price}}
+      </div>
+      <div class="griditem">
+        <img src="./images/catherine_abilene.jpg" title="catherine abilene"/>
+        {{products[2].item_name}}
+        {{products[2].price}}
+      </div>
+      <div class="griditem">
+        <img src="./images/girldoor.jpg"/>
+      </div>
+      <div class="griditem">
+        <img src="./images/giantsteamboat1853.jpg" title="badass"/>
+      </div>
+      <div class="griditem">
+        <img src="./images/girldoor.jpg"/>
+      </div>
+      <div class="griditem">
+            <img src="./images/girl.jpg" title="elliot cornview"/>
+      </div>
+      <div class="griditem">
+        <img src="./images/girldoor.jpg"/>
+      </div>
+      <div class="griditem">
+        <img src="./images/girl.jpg"/>
+      </div>
+
+    </div>
+
+
+
+</div> -->

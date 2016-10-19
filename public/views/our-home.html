@@ -1,0 +1,36 @@
+<header>
+<div class="cornbox">
+  <header-directive></header-directive>
+</div>
+</header>
+
+<div class="jeanscollection">
+    <div class="grid3">
+      <div class="griditem-5peat" ng-repeat="product in products | orderBy: 'image2url' | limitTo: 10">
+        <div class='gridImageWrap' style="background-image: url({{product.imageurl}})">
+            <img ng-src="{{product.image2url}}"/>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="module-hompage-collection-names module">
+    <ul class="collection-names">
+      <li>catherine abilene</li>
+      .
+      <li>barton slim black rigid</li>
+      .
+      <li>james tacoma</li>
+      .
+      <li>charlie rigid</li>
+      .
+      <li>barton slim wauseon</li>
+      .
+      <li>elle asbury</li>
+      .
+      <li>elizabeth wayfarer ll frayed</li>
+      .
+      <li>imogene rigid</li>
+      .
+      <li>oscar black rigid</li>
+    </ul>
+  </div>

@@ -1,0 +1,76 @@
+<div class='checkoutImagebox'>
+<header-directive></header-directive>
+</div>
+
+<div class="checkout-header">
+  <div class="checkout-header-logo"></div>
+</div>
+
+
+<div class="checkout-step-billing">
+  <div class="checkout-step-left">
+    <div class="checkout-step-title">billing</div>
+  </div>
+  <div class="checkout-step-right-form">
+    <div class="checkout-form">
+        <div class="checkout-column">
+          <div class="checkout-field-text">
+              <input type="text" required placeholder="FIRST NAME">
+          </div>
+          <div class="checkout-field-text">
+              <input type="text" placeholder="LAST NAME">
+          </div>
+          <div class="checkout-field-text">
+              <input type="text" placeholder="COMPANY (optional)">
+          </div>
+          <div class="checkout-field-text">
+              <input type="text" placeholder="EMAIL">
+          </div>
+          <div class="checkout-field-text">
+              <input type="text" placeholder="PHONE">
+          </div>
+        </div>
+        <div class="checkout-column">
+          <div class="checkout-field-text">
+              <input type="text" placeholder="ADDRESS ONE">
+          </div>
+          <div class="checkout-field-text">
+              <input type="text" ng-change="goToCorn()" ng-model="corn" placeholder="ADDRESS TWO (optional)">
+          </div>
+          <div class="checkout-field-text">
+              <input type="text" placeholder="CITY">
+          </div>
+          <div class="checkout-field-dropdown">
+              <select class="checkout-field-dd">
+                <option>STATE / PROVINCE</option>
+                <option>ALABAMA</option>
+                <option>TENNESSEE</option>
+                <option>CALIFORNIA</option>
+                <option>ILLINOIS</option>
+                <option>UTAH</option>
+                <option>TEXAS</option>
+                <option>MISSOURI</option>
+              </select>
+          </div>
+          <div class="checkout-field-text">
+              <input type="text" placeholder="ZIP CODE">
+          </div>
+          <div class="checkout-field-dropdown">
+              <select class="checkout-field-dd">
+                <option>UNITED STATES</option>
+                <option>NEW ZEALAND</option>
+                <option>SWEDEN</option>
+                <option>FRANCE</option>
+                <option>MEXICO</option>
+                <option>NAMIBIA</option>
+                <option>CANADA</option>
+              </select>
+          </div>
+        </div>
+    </div>
+
+
+  </div>
+
+
+</div>
